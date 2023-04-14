@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SystemWypozyczen">
+   <children>
+      <AnchorPane layoutX="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1210.0">
+         <children>
+            <Pane layoutX="-18.0" prefHeight="656.0" prefWidth="402.0" style="-fx-background-color: rgb(102,102,255);">
+               <children>
+                  <Label layoutX="140.0" layoutY="54.0" prefHeight="35.0" prefWidth="150.0" text="Dane książki" textFill="#f5f5f5">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="52.0" fitWidth="55.0" layoutX="62.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/AddNewBookIcons/icons8_Literature_100px_1.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="28.0" layoutY="101.0" prefHeight="5.0" prefWidth="316.0" style="-fx-background-color: rgb(255,255,255);" />
+                  <Label layoutX="13.0" layoutY="124.0" prefHeight="34.0" prefWidth="150.0" text="ID KSIĄŻKI :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="210.0" prefHeight="34.0" prefWidth="150.0" text="AUTOR :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="287.0" prefHeight="34.0" prefWidth="150.0" text="TYTUŁ :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="362.0" prefHeight="34.0" prefWidth="207.0" text="WYDAWNICTWO :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="454.0" prefHeight="34.0" prefWidth="207.0" text="GATUNEK :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="529.0" prefHeight="34.0" prefWidth="207.0" text="ROK WYDANIA  :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="601.0" prefHeight="34.0" prefWidth="310.0" text="DOSTĘPNE EGZEMPLARZE :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backIcon" fitHeight="42.0" fitWidth="35.0" layoutX="11.0" onMouseClicked="#BackAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/arrow-81-48.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="idLabel" layoutX="60.0" layoutY="158.0" prefHeight="34.0" prefWidth="316.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="autorLabel" layoutX="53.0" layoutY="244.0" prefHeight="34.0" prefWidth="316.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tytulLabel" layoutX="49.0" layoutY="328.0" prefHeight="34.0" prefWidth="316.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="wydawnictwoLabel" layoutX="53.0" layoutY="407.0" prefHeight="34.0" prefWidth="316.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gatunekLabel" layoutX="51.0" layoutY="488.0" prefHeight="34.0" prefWidth="316.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="rokLabel" layoutX="60.0" layoutY="563.0" prefHeight="34.0" prefWidth="310.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="iloscLabel" layoutX="316.0" layoutY="601.0" prefHeight="34.0" prefWidth="73.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="394.0" prefHeight="656.0" prefWidth="402.0" style="-fx-background-color: rgb(255,51,51);">
+               <children>
+                  <Label layoutX="128.0" layoutY="53.0" prefHeight="35.0" prefWidth="195.0" text="Dane czytelnika" textFill="#f5f5f5">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="43.0" layoutY="99.0" prefHeight="5.0" prefWidth="316.0" style="-fx-background-color: rgb(255,255,255);" />
+                  <ImageView fitHeight="52.0" fitWidth="55.0" layoutX="57.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/AddNewBookIcons/icons8_Student_Registration_100px_2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="23.0" layoutY="121.0" prefHeight="34.0" prefWidth="228.0" text="ID CZYTELNIKA :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="203.0" prefHeight="34.0" prefWidth="150.0" text="IMIE :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="281.0" prefHeight="34.0" prefWidth="150.0" text="NAZWISKO :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="368.0" prefHeight="34.0" prefWidth="150.0" text="ADRES :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="443.0" prefHeight="34.0" prefWidth="150.0" text="MIASTO :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="518.0" prefHeight="34.0" prefWidth="207.0" text="KOD POCZTOWY :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="591.0" prefHeight="34.0" prefWidth="254.0" text="CZY ZABLOKOWANY :" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CIDLabel" layoutX="57.0" layoutY="163.0" prefHeight="34.0" prefWidth="207.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CIMIELabel" layoutX="57.0" layoutY="237.0" prefHeight="34.0" prefWidth="207.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CNAZWISKOLabel" layoutX="57.0" layoutY="328.0" prefHeight="34.0" prefWidth="207.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CADRESLabel" layoutX="57.0" layoutY="409.0" prefHeight="34.0" prefWidth="207.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CMIASTOLabel" layoutX="57.0" layoutY="484.0" prefHeight="34.0" prefWidth="207.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CKODLabel" layoutX="57.0" layoutY="552.0" prefHeight="34.0" prefWidth="207.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CBLOKLabel" layoutX="280.0" layoutY="591.0" prefHeight="34.0" prefWidth="100.0" textFill="#171616">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="903.0" layoutY="54.0" prefHeight="35.0" prefWidth="280.0" text="Wypożyczenie książki" textFill="#ff3333">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="848.0" layoutY="100.0" prefHeight="5.0" prefWidth="316.0" style="-fx-background-color: rgb(255,51,51);" />
+            <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="848.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/AddNewBookIcons/icons8_Books_52px_1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="dodaj_button" layoutX="917.0" layoutY="351.0" mnemonicParsing="false" onAction="#dodaj_action" prefHeight="42.0" prefWidth="179.0" style="-fx-background-color: #ff3333; -fx-background-radius: 15;" stylesheets="@../styles/style.css" text="Wykonaj wypożyczenie" textFill="#f8f4f4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="828.0" layoutY="170.0" prefHeight="34.0" prefWidth="166.0" text="Wybierz książkę :" textFill="#ff3333">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ksiazkaBox" layoutX="1040.0" layoutY="175.0" onAction="#test123" prefWidth="150.0" />
+            <Label layoutX="828.0" layoutY="213.0" prefHeight="34.0" prefWidth="179.0" text="Wybierz czytelnika :" textFill="#ff3333">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="czytelnikBox" layoutX="1040.0" layoutY="218.0" onAction="#czytelnikAction" prefWidth="150.0" />
+            <Label layoutX="828.0" layoutY="270.0" prefHeight="34.0" prefWidth="179.0" text="Data Wypożyczenia :" textFill="#ff3333">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="wypozyczenieDate" layoutX="1016.0" layoutY="275.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

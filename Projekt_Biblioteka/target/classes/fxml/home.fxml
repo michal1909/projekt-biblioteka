@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1210.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.home">
+   <children>
+      <Pane prefHeight="70.0" prefWidth="1210.0" style="-fx-background-color: rgb(102,102,255);">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="52.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/adminIcons/icons8_menu_48px_1.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Pane layoutX="61.0" layoutY="11.0" prefHeight="50.0" prefWidth="5.0" style="-fx-background-color: rgb(51,51,51);" />
+            <Label layoutX="90.0" layoutY="20.0" text="System Zarządzania Biblioteką" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="1045.0" layoutY="27.0" text="Witaj, Admin" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="30.0" layoutX="997.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/adminIcons/male_user_50px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="70.0" prefHeight="580.0" prefWidth="340.0" style="-fx-background-color: rgb(51,51,51);">
+         <children>
+            <Pane layoutY="48.0" prefHeight="40.0" prefWidth="340.0" style="-fx-background-color: rgb(255,51,51);">
+               <children>
+                  <Label layoutX="105.0" layoutY="10.0" text="Strona Główna" textFill="WHITE">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" layoutX="57.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/home_24px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="59.0" layoutY="136.0" text="Funkcje" textFill="#999999">
+               <font>
+                  <Font name="Yu Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <Pane fx:id="ksiazka_pane" layoutY="164.0" onMouseClicked="#ksiazkiWindow" onMouseEntered="#ksiazkaEnteredAction" onMouseExited="#ksiazkaExitedAction" prefHeight="40.0" prefWidth="340.0" style="-fx-background-color: rgb(51,51,51);">
+               <children>
+                  <Label layoutX="105.0" layoutY="10.0" text="Zarządzanie Książkami" textFill="#999999">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" layoutX="57.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_Book_26px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="czytelnicy_pane" layoutY="204.0" onMouseClicked="#czytelnicyWindow" onMouseEntered="#czytEnteredAction" onMouseExited="#czytExitedAction" prefHeight="40.0" prefWidth="340.0" style="-fx-background-color: rgb(51,51,51);">
+               <children>
+                  <Label layoutX="106.0" layoutY="10.0" text="Zarządzanie Czytelnikami" textFill="#999999">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" layoutX="57.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_Read_Online_26px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="wypozyczenia_pane" layoutY="244.0" onMouseClicked="#systemWindow" onMouseEntered="#wypEnteredAction" onMouseExited="#wypExitedAction" prefHeight="40.0" prefWidth="340.0" style="-fx-background-color: rgb(51,51,51);">
+               <children>
+                  <Label layoutX="105.0" layoutY="10.0" text="System wypożyczeń" textFill="#999999">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" layoutX="58.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_Sell_50px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="zwroty_pane" layoutY="284.0" onMouseClicked="#zwrotWindow" onMouseEntered="#zwrotEnteredAction" onMouseExited="#zwrotExitedAction" prefHeight="40.0" prefWidth="340.0" style="-fx-background-color: rgb(51,51,51);">
+               <children>
+                  <Label layoutX="106.0" layoutY="10.0" text="Zwracanie Książek" textFill="#999999">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" layoutX="57.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_Return_Purchase_26px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="zamowienia_pane" layoutX="-7.0" layoutY="324.0" onMouseClicked="#zamowienieWindow" onMouseEntered="#rekordEnteredAction" onMouseExited="#rekordExitedAction" prefHeight="40.0" prefWidth="340.0" style="-fx-background-color: rgb(51,51,51);">
+               <children>
+                  <Label layoutX="113.0" layoutY="9.0" prefHeight="22.0" prefWidth="190.0" text="Składanie zamówień" textFill="#999999">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" layoutX="65.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_View_Details_26px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="odbiorKsiazki_pane" layoutY="364.0" onMouseClicked="#odbiorWindow" onMouseEntered="#wypKsiazkiEnteredAction" onMouseExited="#wypKsiazkiExitedAction" prefHeight="40.0" prefWidth="340.0" style="-fx-background-color: rgb(51,51,51);">
+               <children>
+                  <Label layoutX="106.0" layoutY="10.0" text="Odbiór zamówień" textFill="#999999">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" layoutX="60.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_Read_Online_26px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="czarna_pane" layoutY="404.0" onMouseClicked="#bazaWindow" onMouseEntered="#czarnaEnteredAction" onMouseExited="#czarnaExitedAction" prefHeight="40.0" prefWidth="340.0" style="-fx-background-color: rgb(51,51,51);">
+               <children>
+                  <Label layoutX="104.0" layoutY="10.0" text="Baza danych" textFill="#999999">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" layoutX="59.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_Library_26px_1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane layoutY="444.0" onMouseClicked="#wylogujWindow" prefHeight="40.0" prefWidth="340.0" style="-fx-background-color: rgb(102,102,255);">
+               <children>
+                  <Label layoutX="102.0" layoutY="10.0" text="Wyloguj" textFill="WHITE">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" layoutX="60.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_Exit_26px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="316.0" layoutY="56.0" prefHeight="960.0" prefWidth="1572.0">
+         <children>
+            <Pane layoutX="54.0" layoutY="82.0" prefHeight="94.0" prefWidth="156.0" style="-fx-border-color: rgb(255,51,51); -fx-border-width: 15 0 0 0; -fx-background-color: rgb(240,240,240);">
+               <children>
+                  <Label fx:id="KsiazkiLabel" layoutX="78.0" layoutY="23.0" textFill="#666666">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="40.0" layoutX="23.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_Book_Shelf_50px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="72.0" layoutY="46.0" text="Liczba Książek" textFill="#666666">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="281.0" layoutY="82.0" prefHeight="94.0" prefWidth="156.0" style="-fx-border-color: rgb(102,102,255); -fx-border-width: 15 0 0 0; -fx-background-color: rgb(240,240,240);">
+               <children>
+                  <Label fx:id="czytelnicyLabel" layoutX="78.0" layoutY="23.0" textFill="#666666">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="40.0" layoutX="24.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_People_50px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="279.0" layoutY="46.0" text="Liczba Czytelników" textFill="#666666">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="507.0" layoutY="82.0" prefHeight="94.0" prefWidth="156.0" style="-fx-border-color: rgb(255,51,51); -fx-border-width: 15 0 0 0; -fx-background-color: rgb(240,240,240);">
+               <children>
+                  <Label fx:id="wydaneLabel" layoutX="78.0" layoutY="27.0" textFill="#666666">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="40.0" layoutX="22.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_Sell_50px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="496.0" layoutY="46.0" text="Wypożyczone książki" textFill="#666666">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="708.0" layoutY="82.0" prefHeight="94.0" prefWidth="156.0" style="-fx-border-color: rgb(102,102,255); -fx-border-width: 15 0 0 0; -fx-background-color: rgb(240,240,240);">
+               <children>
+                  <Label fx:id="czarnaLabel" layoutX="78.0" layoutY="23.0" textFill="#666666">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="40.0" layoutX="22.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adminIcons/icons8_List_of_Thumbnails_50px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="725.0" layoutY="46.0" text="Czarna Lista" textFill="#666666">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane fx:id="panelPieChart" layoutX="898.0" layoutY="356.0" prefHeight="450.0" prefWidth="540.0" />
+            <Label layoutX="179.0" layoutY="189.0" text="BESTSELLERY" textFill="#666666">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <PieChart fx:id="bestsellerChart" layoutX="23.0" layoutY="218.0" prefHeight="368.0" prefWidth="462.0" stylesheets="@../styles/style.css" />
+            <Label layoutX="518.0" layoutY="189.0" text="NAJLEPIEJ OCENIANIE KSIĄŻKI" textFill="#666666">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <BarChart fx:id="chartRecenzje" layoutX="489.0" layoutY="218.0" legendVisible="false" prefHeight="375.0" prefWidth="408.0" stylesheets="@../styles/style.css">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

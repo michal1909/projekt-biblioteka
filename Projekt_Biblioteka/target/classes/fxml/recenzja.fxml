@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.recenzje">
+   <children>
+      <Pane prefHeight="94.0" prefWidth="900.0" style="-fx-background-color: rgb(51,51,51);">
+         <children>
+            <Label layoutX="130.0" layoutY="23.0" prefHeight="35.0" prefWidth="148.0" text="Recenzja" textFill="#ff3333">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="53.0" layoutX="63.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/writing.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="14.0" layoutY="77.0" prefHeight="5.0" prefWidth="300.0" style="-fx-background-color: rgb(255,51,51);" />
+            <Label layoutX="633.0" layoutY="30.0" prefHeight="35.0" prefWidth="78.0" text="Witaj, " textFill="#ff3333">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameLabel" layoutX="711.0" layoutY="30.0" prefHeight="35.0" prefWidth="185.0" textFill="#ff3333">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="567.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ComboBox fx:id="ksiazkaBox" layoutX="330.0" layoutY="172.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="286.0" layoutY="126.0" prefHeight="34.0" prefWidth="89.0" text="Książka" textFill="#666666">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="223.0" prefHeight="34.0" prefWidth="89.0" text="Ocena" textFill="#666666">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="339.0" prefHeight="34.0" prefWidth="127.0" text="Komentarz" textFill="#666666">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="areaComment" layoutX="271.0" layoutY="384.0" prefHeight="141.0" prefWidth="345.0" wrapText="true" />
+      <Button fx:id="dodajButton" layoutX="358.0" layoutY="541.0" mnemonicParsing="false" onAction="#dodajAction" prefHeight="30.0" prefWidth="157.0" style="-fx-background-color: #ff3333; -fx-background-radius: 15;" text="Dodaj recenzje" textFill="#f8f4f4">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="s1" fitHeight="43.0" fitWidth="43.0" layoutX="343.0" layoutY="286.0" onMouseClicked="#s1Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/star.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="s2" fitHeight="43.0" fitWidth="43.0" layoutX="386.0" layoutY="286.0" onMouseClicked="#s2Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/star.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="s3" fitHeight="43.0" fitWidth="43.0" layoutX="429.0" layoutY="286.0" onMouseClicked="#s3Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/star.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="s4" fitHeight="43.0" fitWidth="43.0" layoutX="472.0" layoutY="286.0" onMouseClicked="#s4Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/star.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="s5" fitHeight="43.0" fitWidth="43.0" layoutX="515.0" layoutY="286.0" onMouseClicked="#s5Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/star.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="s1gold" fitHeight="43.0" fitWidth="43.0" layoutX="343.0" layoutY="286.0" onMouseClicked="#s1goldAction" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/star2.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="s2gold" fitHeight="43.0" fitWidth="43.0" layoutX="386.0" layoutY="286.0" onMouseClicked="#s2goldAction" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/star2.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="s3gold" fitHeight="43.0" fitWidth="43.0" layoutX="429.0" layoutY="286.0" onMouseClicked="#s3goldAction" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/star2.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="s4gold" fitHeight="43.0" fitWidth="43.0" layoutX="472.0" layoutY="286.0" onMouseClicked="#s4goldAction" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/star2.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="s5gold" fitHeight="43.0" fitWidth="43.0" layoutX="515.0" layoutY="286.0" onMouseClicked="#s5goldAction" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/star2.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="dodajButton1" layoutX="14.0" layoutY="556.0" mnemonicParsing="false" onAction="#wylogujAction" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #ff3333; -fx-background-radius: 15;" text="Wyloguj" textFill="#f8f4f4">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+
+   </children>
+</AnchorPane>

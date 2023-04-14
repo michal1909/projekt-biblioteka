@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="590.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.baza">
+   <children>
+      <TabPane layoutX="-6.0" layoutY="58.0" prefHeight="540.0" prefWidth="757.0" style="-fx-background-color: rgb(51,51,51);" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Wypozyczenia">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="745.0">
+                     <children>
+                        <TableView fx:id="wypozyczeniaTable" layoutX="7.0" prefHeight="507.0" prefWidth="769.0">
+                          <columns>
+                            <TableColumn fx:id="id_wypozyczenia" prefWidth="121.0" text="ID_WYPOZYCZENIA" />
+                            <TableColumn fx:id="id_egzemplarza" prefWidth="122.0" text="ID_EGZEMPLARZA" />
+                              <TableColumn fx:id="id_czytelnika" prefWidth="112.0" text="ID_CZYTELNIKA" />
+                              <TableColumn fx:id="data_wypozyczenia" minWidth="0.0" prefWidth="159.0" text="DATA_WYPOZYCZENIA" />
+                              <TableColumn fx:id="data_zwrotu" prefWidth="121.0" text="DATA_ZWROTU" />
+                              <TableColumn fx:id="czy_oddane" prefWidth="122.0" text="CZY_ODDANE" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Wypozyczenia_historia">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="wypozyczeniaTable2" prefHeight="507.0" prefWidth="769.0">
+                           <columns>
+                              <TableColumn fx:id="id_wypozyczenia2" prefWidth="121.0" text="ID_WYPOZYCZENIA" />
+                              <TableColumn fx:id="id_egzemplarza2" prefWidth="122.0" text="ID_EGZEMPLARZA" />
+                              <TableColumn fx:id="id_czytelnika2" prefWidth="112.0" text="ID_CZYTELNIKA" />
+                              <TableColumn fx:id="data_wypozyczenia2" minWidth="0.0" prefWidth="159.0" text="DATA_WYPOZYCZENIA" />
+                              <TableColumn fx:id="data_zwrotu2" prefWidth="110.0" text="DATA_ZWROTU" />
+                              <TableColumn fx:id="czy_oddane2" prefWidth="133.0" text="CZY_ODDANE" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Zamowienia">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="zamowieniaTable" prefHeight="507.0" prefWidth="769.0">
+                           <columns>
+                              <TableColumn fx:id="id_zamowienia" prefWidth="121.0" text="ID_ZAMOWIENIA" />
+                              <TableColumn fx:id="id_czytelnikaZ" prefWidth="122.0" text="ID_CZYTELNIKA" />
+                              <TableColumn prefWidth="79.0" text="ID_KSIAZKI" />
+                              <TableColumn fx:id="ilosc" prefWidth="92.0" text="ILOSC" />
+                              <TableColumn fx:id="suma" minWidth="0.0" prefWidth="81.0" text="SUMA" />
+                              <TableColumn fx:id="data_odbioru" prefWidth="124.0" text="DATA_ODBIORU" />
+                              <TableColumn fx:id="czy_aktywne" prefWidth="142.0" text="CZY_AKTYWNE" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Zamowienia_historia">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="28.0" prefWidth="726.0">
+                     <children>
+                        <TableView fx:id="zamowieniaTable2" prefHeight="507.0" prefWidth="769.0">
+                           <columns>
+                              <TableColumn fx:id="id_zamowienia2" prefWidth="121.0" text="ID_ZAMOWIENIA" />
+                              <TableColumn fx:id="id_czytelnikaZ2" prefWidth="122.0" text="ID_CZYTELNIKA" />
+                              <TableColumn fx:id="id_ksiazki2" prefWidth="79.0" text="ID_KSIAZKI" />
+                              <TableColumn fx:id="ilosc2" prefWidth="92.0" text="ILOSC" />
+                              <TableColumn fx:id="suma2" minWidth="0.0" prefWidth="81.0" text="SUMA" />
+                              <TableColumn fx:id="data_odbioru2" prefWidth="124.0" text="DATA_ODBIORU" />
+                              <TableColumn fx:id="czy_aktywne2" prefWidth="139.0" text="CZY_AKTYWNE" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane prefHeight="57.0" prefWidth="757.0" style="-fx-background-color: rgb(51,51,51);">
+         <children>
+            <Label layoutX="286.0" layoutY="11.0" prefHeight="35.0" prefWidth="179.0" text="BAZA DANYCH" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="backIcon" fitHeight="42.0" fitWidth="38.0" layoutX="7.0" layoutY="6.0" onMouseClicked="#BackAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/arrow-81-48.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="229.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/database.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

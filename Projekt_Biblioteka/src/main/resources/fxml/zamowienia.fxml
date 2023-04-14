@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="458.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ZarzadzanieZamowieniami">
+   <children>
+      <AnchorPane prefHeight="458.0" prefWidth="740.0">
+         <children>
+            <AnchorPane layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="732.0">
+               <children>
+                  <Label layoutX="330.0" layoutY="37.0" prefHeight="35.0" prefWidth="280.0" text="Złóż zamówienie" textFill="#ff3333">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="243.0" layoutY="82.0" prefHeight="5.0" prefWidth="316.0" style="-fx-background-color: rgb(255,51,51);" />
+                  <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="256.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/Webp.net-resizeimage%20(1).jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="zamowienie_button" layoutX="401.0" layoutY="332.0" mnemonicParsing="false" onAction="#ZlozAction" prefHeight="42.0" prefWidth="179.0" style="-fx-background-color: #ff3333; -fx-background-radius: 15;" stylesheets="@../styles/style.css" text="Złóż zamówienie" textFill="#f8f4f4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="215.0" layoutY="132.0" prefHeight="34.0" prefWidth="166.0" text="Wybierz książkę :" textFill="#ff3333">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="ksiazkaBox" layoutX="395.0" layoutY="137.0" prefWidth="150.0" />
+                  <Label layoutX="215.0" layoutY="173.0" prefHeight="34.0" prefWidth="179.0" text="Wybierz czytelnika :" textFill="#ff3333">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="czytelnikBox" layoutX="395.0" layoutY="178.0" prefWidth="150.0" />
+                  <TextField fx:id="iloscField" layoutX="396.0" layoutY="228.0" />
+                  <Label layoutX="215.0" layoutY="223.0" prefHeight="34.0" prefWidth="179.0" text="ile sztuk :" textFill="#ff3333">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="336.0" prefHeight="34.0" prefWidth="179.0" text="Suma zamówienia :" textFill="#ff3333">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sumaLabel" layoutX="300.0" layoutY="336.0" prefHeight="34.0" prefWidth="101.0" text="0 zł" textFill="#4e36ff">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutY="-6.0" prefHeight="57.0" prefWidth="53.0" style="-fx-background-color: rgb(102,102,255);">
+                     <children>
+                        <ImageView fx:id="backIcon" fitHeight="42.0" fitWidth="35.0" layoutX="9.0" layoutY="10.0" onMouseClicked="#BackAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/arrow-81-48.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

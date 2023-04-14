@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.odbior">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="823.0">
+                     <children>
+                        <Pane layoutX="-20.0" layoutY="-3.0" prefHeight="656.0" prefWidth="375.0" style="-fx-background-color: rgb(255,51,51);">
+                           <children>
+                              <Label layoutX="45.0" layoutY="54.0" prefHeight="35.0" prefWidth="329.0" text="Informacje o zamówieniu :" textFill="#f5f5f5">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="15.0" layoutY="99.0" prefHeight="5.0" prefWidth="360.0" style="-fx-background-color: rgb(255,255,255);" />
+                              <Label layoutX="23.0" layoutY="121.0" prefHeight="34.0" prefWidth="228.0" text="ID ZAMÓWIENIA:" textFill="#fffafa">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="23.0" layoutY="197.0" prefHeight="34.0" prefWidth="228.0" text="ID CZYTELNIKA :" textFill="#fffafa">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="262.0" prefHeight="34.0" prefWidth="272.0" text="ID KSIAZKI :" textFill="#fffafa">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="backIcon" fitHeight="42.0" fitWidth="35.0" layoutX="27.0" layoutY="8.0" onMouseClicked="#BackAction" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/arrow-81-48.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label fx:id="idzamowieniaLabel" layoutX="40.0" layoutY="155.0" prefHeight="34.0" prefWidth="228.0" textFill="#110c0c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="idczytelnikaLabel" layoutX="40.0" layoutY="231.0" prefHeight="34.0" prefWidth="228.0" textFill="#110c0c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="idksiazkiLabel" layoutX="40.0" layoutY="296.0" prefHeight="34.0" prefWidth="228.0" textFill="#110c0c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="339.0" prefHeight="34.0" prefWidth="150.0" text="ILOŚĆ :" textFill="#fffafa">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="iloscLabel" layoutX="40.0" layoutY="373.0" prefHeight="34.0" prefWidth="228.0" textFill="#110c0c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="23.0" layoutY="407.0" prefHeight="34.0" prefWidth="254.0" text="SUMA ZAMÓWIENIA :" textFill="#fffafa">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="sumaLabel" layoutX="40.0" layoutY="441.0" prefHeight="34.0" prefWidth="228.0" textFill="#110c0c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label layoutX="504.0" layoutY="40.0" prefHeight="35.0" prefWidth="206.0" text="Odbiór zamówień" textFill="#ff3333">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="437.0" layoutY="98.0" prefHeight="5.0" prefWidth="340.0" style="-fx-background-color: rgb(255,51,51);" />
+                        <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="456.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/AddNewBookIcons/icons8_Edit_Property_50px.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="odbierzButton" layoutX="490.0" layoutY="347.0" mnemonicParsing="false" onAction="#odbierzAction" prefHeight="42.0" prefWidth="179.0" style="-fx-background-color: #ff3333; -fx-background-radius: 15;" stylesheets="@../styles/style.css" text="Odbierz zamówienie" textFill="#f8f4f4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label layoutX="375.0" layoutY="187.0" prefHeight="34.0" prefWidth="294.0" text="Wybierz zamówienie czytelnika :" textFill="#ff3333">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="czytelnikBox" layoutX="656.0" layoutY="148.0" onAction="#czytelnikBoxAction" prefWidth="150.0" />
+                        <Label layoutX="375.0" layoutY="144.0" prefHeight="34.0" prefWidth="179.0" text="Wybierz czytelnika :" textFill="#ff3333">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="zamowienieBox" layoutX="656.0" layoutY="191.0" onAction="#zamowienieBoxAction" prefWidth="150.0" />
+                        <Label layoutX="375.0" layoutY="228.0" prefHeight="34.0" prefWidth="179.0" text="Odebrano w dniu :" textFill="#ff3333">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="zwrotDate" layoutX="630.0" layoutY="232.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
